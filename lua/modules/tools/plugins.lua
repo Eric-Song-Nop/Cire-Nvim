@@ -39,4 +39,8 @@ plugin['simrat39/symbols-outline.nvim'] = {
     config = conf.symbols_outline
 }
 
+plugin['wakatime/vim-wakatime'] = {
+    opt = false
+}
+
 return plugin
