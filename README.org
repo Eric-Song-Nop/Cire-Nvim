@@ -4,5 +4,5 @@ This is my personal neovim configuration
 - Org mode!
 - IJKL!!!
 - Mostly lua
+- Modulation and simple
 - LSP
-- Modulation
