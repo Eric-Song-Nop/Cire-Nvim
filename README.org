@@ -1,6 +1,5 @@
 #+TITLE: Cire Nvim
 
-* Cire Nvim
 This is my personal neovim configuration
 - Org mode!
 - IJKL!!!
