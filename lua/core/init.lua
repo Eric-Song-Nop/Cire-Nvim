@@ -3,17 +3,63 @@ require('core.event')
 
 local function dashboard_config()
     vim.g.dashboard_default_executive = 'telescope'
+    -- All headers from:
+    -- https://ascii-generator.site
+    vim.g.dashboard_custom_header = {
+        [[ .------..------..------..------.]],
+        [[ |C.--. ||I.--. ||R.--. ||E.--. |]],
+        [[ | :/\: || (\/) || :(): || (\/) |]],
+        [[ | :\/: || :\/: || ()() || :\/: |]],
+        [[ | '--'C|| '--'I|| '--'R|| '--'E|]],
+        [[ `------'`------'`------'`------']],
+    }
+    vim.g.dashboard_custom_header = {
+[[       ___                        ___           ___      ]],
+[[      /  /\           ___        /  /\         /  /\     ]],
+[[     /  /::\         /__/\      /  /::\       /  /::\    ]],
+[[    /  /:/\:\        \__\:\    /  /:/\:\     /  /:/\:\   ]],
+[[   /  /:/  \:\       /  /::\  /  /::\ \:\   /  /::\ \:\  ]],
+[[  /__/:/ \  \:\   __/  /:/\/ /__/:/\:\_\:\ /__/:/\:\ \:\ ]],
+[[  \  \:\  \__\/  /__/\/:/    \__\/ |::\/:/ \  \:\ \:\_\/ ]],
+[[   \  \:\        \  \::/        |  |:|::/   \  \:\ \:\   ]],
+[[    \  \:\        \  \:\        |  |:|\/     \  \:\_\/   ]],
+[[     \  \:\        \__\/        |__|:|        \  \:\     ]],
+[[      \__\/                      \__\|         \__\/     ]],
+    }
+    vim.g.dashboard_custom_header = {
+[[           _____                    _____                    _____                    _____           ]],
+[[          /\    \                  /\    \                  /\    \                  /\    \          ]],
+[[         /::\    \                /::\    \                /::\    \                /::\    \         ]],
+[[        /::::\    \               \:::\    \              /::::\    \              /::::\    \        ]],
+[[       /::::::\    \               \:::\    \            /::::::\    \            /::::::\    \       ]],
+[[      /:::/\:::\    \               \:::\    \          /:::/\:::\    \          /:::/\:::\    \      ]],
+[[     /:::/  \:::\    \               \:::\    \        /:::/__\:::\    \        /:::/__\:::\    \     ]],
+[[    /:::/    \:::\    \              /::::\    \      /::::\   \:::\    \      /::::\   \:::\    \    ]],
+[[   /:::/    / \:::\    \    ____    /::::::\    \    /::::::\   \:::\    \    /::::::\   \:::\    \   ]],
+[[  /:::/    /   \:::\    \  /\   \  /:::/\:::\    \  /:::/\:::\   \:::\____\  /:::/\:::\   \:::\    \  ]],
+[[ /:::/____/     \:::\____\/::\   \/:::/  \:::\____\/:::/  \:::\   \:::|    |/:::/__\:::\   \:::\____\ ]],
+[[ \:::\    \      \::/    /\:::\  /:::/    \::/    /\::/   |::::\  /:::|____|\:::\   \:::\   \::/    / ]],
+[[  \:::\    \      \/____/  \:::\/:::/    / \/____/  \/____|:::::\/:::/    /  \:::\   \:::\   \/____/  ]],
+[[   \:::\    \               \::::::/    /                 |:::::::::/    /    \:::\   \:::\    \      ]],
+[[    \:::\    \               \::::/____/                  |::|\::::/    /      \:::\   \:::\____\     ]],
+[[     \:::\    \               \:::\    \                  |::| \::/____/        \:::\   \::/    /     ]],
+[[      \:::\    \               \:::\    \                 |::|  ~|               \:::\   \/____/      ]],
+[[       \:::\    \               \:::\    \                |::|   |                \:::\    \          ]],
+[[        \:::\____\               \:::\____\               \::|   |                 \:::\____\         ]],
+[[         \::/    /                \::/    /                \:|   |                  \::/    /         ]],
+[[          \/____/                  \/____/                  \|___|                   \/____/          ]],
+    }
     vim.g.dashboard_custom_section = {
         change_colorscheme = {
-            descriptioc = {' Scheme change              leader s c '},
+            description = {' Scheme change              leader s c '},
             command = 'DashboardChangeColorscheme'
         },
-        find_frecency = {
-            description = {' File frecency              leader f r '},
-            command = 'Telescope frecency'
-        },
+        -- find_frecency = {
+        --     description = {' File frecency              leader f r '},
+        --     command = 'Telescope frecency'
+        -- },
         find_history = {
-            description = {' File history               leader f e '},
+            description = {' File history               leader f H '},
             command = 'DashboardFindHistory'
         },
         find_project = {
@@ -35,7 +81,8 @@ local function dashboard_config()
     }
 end
 
-function core_settings()
+local function core_settings()
+    dashboard_config()
     require('core.pack')
     vim.cmd [[colorscheme nord]]
 end

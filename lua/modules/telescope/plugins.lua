@@ -21,6 +21,10 @@ plugins['nvim-telescope/telescope-project.nvim'] = {
 --     event = "BufWinEnter",
 --     config = conf.dashboard
 -- }
+plugins['ChristianChiarulli/dashboard-nvim'] = {
+    event = "BufWinEnter",
+    config = conf.dashboard
+}
 
 return plugins
 

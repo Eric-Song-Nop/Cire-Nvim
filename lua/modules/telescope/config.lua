@@ -36,19 +36,19 @@ function config.telescope()
     }
     vim.cmd [[
         nnoremap <silent> <leader>fp :Telescope project<cr>
-        nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+        nnoremap <leader>fw <cmd>Telescope live_grep<cr>
         nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
         nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
         nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
         nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
-        nnoremap <leader>fc <cmd>lua require('telescope.builtin').colorscheme()<cr>
+        nnoremap <leader>tc <cmd>lua require('telescope.builtin').colorscheme()<cr>
         nnoremap <leader>fk <cmd>lua require('telescope.builtin').keymaps()<cr>
         nnoremap <leader>fz <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
         nnoremap <leader>ft <cmd>lua require('telescope.builtin').treesitter()<cr>
         nnoremap <leader>fs <cmd>lua require('telescope.builtin').lsp_workspace_symbols()<cr>
         nnoremap <leader>fS <cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>
         nnoremap <leader>fr <cmd>lua require('telescope.builtin').lsp_references()<cr>
-        nnoremap <leader>fa <cmd>lua require('telescope.builtin').lsp_code_actions()<cr>
+        nnoremap <leader>fc <cmd>lua require('telescope.builtin').lsp_code_actions()<cr>
         nnoremap <leader>fi <cmd>lua require('telescope.builtin').lsp_implementations()<cr>
         nnoremap <leader>fd <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
         nnoremap <leader>fe <cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>
@@ -58,6 +58,10 @@ end
 
 function config.dashboard()
     vim.g.dashboard_default_executive = 'telescope'
+    vim.cmd [[
+        nnoremap <leader>fn :DashboardNewFile<cr>
+        nnoremap <silent> <leader>fH :DashboardFindHistory<cr>
+    ]]
 end
 
 return config
