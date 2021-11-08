@@ -43,4 +43,8 @@ plugin['wakatime/vim-wakatime'] = {
     opt = false
 }
 
+plugin['SmiteshP/nvim-gps'] = {
+    opt = false,
+    config = conf.nvim_gps
+}
 return plugin

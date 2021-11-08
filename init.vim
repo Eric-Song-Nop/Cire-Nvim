@@ -9,4 +9,10 @@ endif
 
 lua require('init')
 
+if(has("win32") || has("win64"))
+    source $HOME/AppData/Local/nvim/plugBinding.vim
+else
+    source $HOME/.config/nvim/plugBinding.vim
+endif
+
 endif "vscode
