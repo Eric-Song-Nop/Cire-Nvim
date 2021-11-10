@@ -131,4 +131,23 @@ function config.nvim_gps()
     })
 end
 
+function config.trouble()
+    require("trouble").setup {
+        action_keys = {
+            open_split = { "<c-x>" }, -- open buffer in new split
+            open_vsplit = { "<c-v>" }, -- open buffer in new vsplit
+            open_tab = { "<c-t>" }, -- open buffer in new tab
+            previous = "i", -- preview item
+            next = "k" -- next item
+        }
+    }
+    vim.cmd [[
+        nnoremap <leader>xx <cmd>TroubleToggle<cr>
+        nnoremap <leader>xw <cmd>TroubleToggle lsp_workspace_diagnostics<cr>
+        nnoremap <leader>xd <cmd>TroubleToggle lsp_document_diagnostics<cr>
+        nnoremap <leader>xq <cmd>TroubleToggle quickfix<cr>
+        nnoremap <leader>xl <cmd>TroubleToggle loclist<cr>
+    ]]
+end
+
 return config
