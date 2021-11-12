@@ -33,7 +33,7 @@ function autocmd.load_autocmds()
             {"BufWritePre", "*.tmp", "setlocal noundofile"},
             {"BufWritePre", "*.bak", "setlocal noundofile"},
             -- Auto change work directory
-            {"BufEnter", "*", "silent! lcd %:p:h"}, -- auto place to last edit
+            -- {"BufEnter", "*", "silent! lcd %:p:h"}, -- auto place to last edit
             {
                 "BufReadPost", "*",
                 [[if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif]]

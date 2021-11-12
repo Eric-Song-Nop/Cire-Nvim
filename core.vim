@@ -25,7 +25,7 @@ set autoread            " 文件在vim之外修改过，自动重新读入
 set autowrite           " 设置自动保存
 set confirm             " 在处理未保存或只读文件的时候，弹出确认
 set mouse=a
-let netrw_i='T'
+" let netrw_i='T'
 
 set viminfo='1000
 set pastetoggle=<F2>

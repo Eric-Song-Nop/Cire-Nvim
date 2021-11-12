@@ -23,13 +23,13 @@ completion['hrsh7th/nvim-cmp'] = {
         {'hrsh7th/cmp-nvim-lua', after = 'cmp-buffer'},
         {'andersevenrud/compe-tmux', branch = 'cmp', after = 'cmp-nvim-lua'},
         {'hrsh7th/cmp-path', after = 'compe-tmux'},
-        {'f3fora/cmp-spell', after = 'cmp-path'}
-        -- {
-        --     'tzachar/cmp-tabnine',
-        --     run = './install.sh',
-        --     after = 'cmp-spell',
-        --     config = conf.tabnine
-        -- }
+        {'f3fora/cmp-spell', after = 'cmp-path'},
+        {
+            'tzachar/cmp-tabnine',
+            run = './install.sh',
+            after = 'cmp-spell',
+            config = conf.tabnine
+        },
     }
 }
 completion['L3MON4D3/LuaSnip'] = {

@@ -18,8 +18,7 @@ plugin['kristijanhusak/orgmode.nvim'] = {
 }
 
 plugin['kyazdani42/nvim-tree.lua'] = {
-    opt = true,
-    cmd = {'NvimTreeToggle', 'NvimTreeOpen'},
+    opt = false,
     config = conf.nvim_tree
 }
 
