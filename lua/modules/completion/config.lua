@@ -1,7 +1,7 @@
 local config = {}
 
-function config.nvim_lsp() 
-    require('modules.completion.lspconfig') 
+function config.nvim_lsp()
+    require('modules.completion.lspconfigconfig')
 end
 
 function config.lightbulb()
@@ -151,4 +151,3 @@ function config.autopairs()
 end
 
 return config
-

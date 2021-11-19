@@ -84,7 +84,8 @@ end
 local function core_settings()
     dashboard_config()
     require('core.pack')
-    vim.cmd [[colorscheme nord]]
+    vim.cmd [[set background=dark]]
+    vim.cmd [[colorscheme edge]]
 end
 
 core_settings()

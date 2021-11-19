@@ -1,6 +1,6 @@
 local config = {}
 function config.edge()
-    vim.cmd [[set background=dark]]
+    -- vim.cmd [[set background=dark]]
     vim.g.edge_enable_italic = 1
 end
 
@@ -10,7 +10,8 @@ function config.lualine()
         options = {
             icons_enabled = true,
             -- theme = 'onedark',
-            theme = 'nord',
+            -- theme = 'nord',
+            theme = 'edge',
             disabled_filetypes = {},
             component_separators = '|',
             section_separators = {left = '', right = ''}

@@ -6,6 +6,7 @@ plugin['kyazdani42/nvim-web-devicons'] = {opt = false}
 plugin['sainnhe/edge'] = {opt = false, config = conf.edge}
 plugin['sainnhe/gruvbox-material'] = {opt = false, config = conf.edge}
 plugin['shaunsingh/nord.nvim'] = {opt = false, config = conf.edge}
+plugin['NTBBloodbath/doom-one.nvim'] = {opt = false, config = conf.edge}
 
 plugin['hoob3rt/lualine.nvim'] = {
     opt = false,
