@@ -94,12 +94,12 @@ lsp_installer.on_server_ready(function(server)
         opts.cmd = { "clangd", "--background-index", "--clang-tidy"}
         opts.filetypes = { "c", "cpp", "objc", "objcpp", "cuda" }
         opts.commands = {
-            ClangdSwitchSourceHeader = {
-                function()
-                    switch_source_header_splitcmd(0, "edit")
-                end,
-                description = "Open source/header in current buffer"
-            },
+            -- ClangdSwitchSourceHeader = {
+            --     function()
+            --         switch_source_header_splitcmd(0, "edit")
+            --     end,
+            --     description = "Open source/header in current buffer"
+            -- },
             ClangdSwitchSourceHeaderVSplit = {
                 function()
                     switch_source_header_splitcmd(0, "vsplit")
