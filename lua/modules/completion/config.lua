@@ -62,7 +62,7 @@ function config.cmp()
                     nvim_lua = "[Lua]",
                     buffer = "[BUF]",
                     path = "[PATH]",
-                    tmux = "[TMUX]",
+                    -- tmux = "[TMUX]",
                     luasnip = "[SNIP]",
                     spell = "[SPELL]"
                 })[entry.source.name]
@@ -121,8 +121,10 @@ function config.cmp()
         sources = {
             {name = 'nvim_lsp'}, {name = 'nvim_lua'}, {name = 'luasnip'},
             {name = 'buffer'}, {name = 'path'}, {name = 'spell'},
-            {name = 'tmux'}, {name = 'orgmode'},
+            -- {name = 'tmux'},
+            {name = 'orgmode'},
             {name = 'cmp_tabnine'},
+            { name = "neorg" },
         }
     }
 end

@@ -17,6 +17,11 @@ plugin['kristijanhusak/orgmode.nvim'] = {
     config = conf.lang_org
 }
 
+-- plugin['nvim-neorg/neorg'] = {
+--     opt = false,
+--     config = conf.norg
+-- }
+
 plugin['kyazdani42/nvim-tree.lua'] = {
     opt = false,
     config = conf.nvim_tree

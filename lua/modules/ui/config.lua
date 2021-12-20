@@ -26,7 +26,7 @@ function config.lualine()
             lualine_x = {
                 {
                     'diagnostics',
-                    sources = {'nvim_lsp'},
+                    sources = {'nvim_diagnostic'},
                     color_error = "#BF616A",
                     color_warn = "#EBCB8B",
                     color_info = "#81A1AC",
@@ -64,7 +64,8 @@ function config.nvim_bufferline()
             show_buffer_close_icons = true,
             show_buffer_icons = true,
             show_tab_indicators = true,
-            diagnostics = "nvim_lsp",
+            -- diagnostics = "nvim_lsp",
+            diagnostics = "nvim_diagnostic",
             always_show_bufferline = true,
             separator_style = "thin",
             offsets = {
