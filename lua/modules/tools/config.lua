@@ -2,7 +2,7 @@ local config = {}
 
 function config.sitter()
     require'nvim-treesitter.configs'.setup {
-        ensure_installed = {"norg", "norg_meta", "norg_table"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+        -- ensure_installed = {"norg", "norg_meta", "norg_table"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
         -- ignore_install = { "javascript" }, -- List of parsers to ignore installing
         highlight = {
             enable = true,
@@ -101,14 +101,14 @@ function config.nvim_tree()
         view = {
             width = 30,
             side = 'left',
-            auto_resize = false,
+            auto_resize = true,
             mappings = {
-                custom_only = true,
+                custom_only = false,
                 list = {
-                    {
-                        key = {"<CR>", "o", "<2-LeftMouse>"},
-                        cb = tree_cb("tabnew")
-                    },
+                    -- {
+                    --     key = {"<CR>", "o", "<2-LeftMouse>"},
+                    --     cb = tree_cb("tabnew")
+                    -- },
                     {key = {"<2-RightMouse>", "<C-]>"}, cb = tree_cb("cd")},
                     {key = "<C-v>", cb = tree_cb("vsplit")},
                     {key = "<C-s>", cb = tree_cb("split")},
