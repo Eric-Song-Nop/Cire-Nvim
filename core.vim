@@ -16,7 +16,8 @@ set shiftwidth=4
 set softtabstop=4
 set whichwrap+=<,>,h,l   " 设置光标键跨行
 set ttimeoutlen=0        " 设置<ESC>键响应时间
-set virtualedit=block,onemore   " 允许光标出现在最后一个字符的后面
+" set virtualedit=block,onemore   " 允许光标出现在最后一个字符的后面
+set virtualedit=all   " 允许光标出现在最后一个字符的后面
 filetype indent on       " 自适应不同语言的智能缩进
 set smarttab             " 在行和段开始处使用制表符
 set nobackup            " 设置不备份
@@ -26,6 +27,9 @@ set autowrite           " 设置自动保存
 set confirm             " 在处理未保存或只读文件的时候，弹出确认
 set mouse=a
 " let netrw_i='T'
+
+set scrolloff=8
+set sidescrolloff=8
 
 set viminfo='1000
 set pastetoggle=<F2>

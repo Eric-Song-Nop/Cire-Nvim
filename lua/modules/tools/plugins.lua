@@ -1,20 +1,25 @@
 local plugin = {}
-local conf = require('modules.tools.config')
+local conf = require("modules.tools.config")
 
-plugin['nvim-treesitter/nvim-treesitter'] = {
-    opt = false,
-    run = 'TSUpdate',
-    config = conf.sitter
+plugin["jose-elias-alvarez/null-ls.nvim"] = {
+	opt = false,
+	config = conf.null,
 }
 
-plugin['folke/which-key.nvim'] = {
-    opt = false,
-    config = conf.which_key
+plugin["nvim-treesitter/nvim-treesitter"] = {
+	opt = false,
+	run = "TSUpdate",
+	config = conf.sitter,
 }
 
-plugin['kristijanhusak/orgmode.nvim'] = {
-    opt = false,
-    config = conf.lang_org
+plugin["folke/which-key.nvim"] = {
+	opt = false,
+	config = conf.which_key,
+}
+
+plugin["kristijanhusak/orgmode.nvim"] = {
+	opt = false,
+	config = conf.lang_org,
 }
 
 -- plugin['nvim-neorg/neorg'] = {
@@ -22,38 +27,38 @@ plugin['kristijanhusak/orgmode.nvim'] = {
 --     config = conf.norg
 -- }
 
-plugin['kyazdani42/nvim-tree.lua'] = {
-    opt = false,
-    config = conf.nvim_tree
+plugin["kyazdani42/nvim-tree.lua"] = {
+	opt = false,
+	config = conf.nvim_tree,
 }
 
-plugin['sbdchd/neoformat'] = {
-    opt = true,
-    cmd = 'Neoformat'
+-- plugin["sbdchd/neoformat"] = {
+-- 	opt = true,
+-- 	cmd = "Neoformat",
+-- }
+
+plugin["terrortylor/nvim-comment"] = {
+	opt = false,
+	config = conf.comment,
 }
 
-plugin['terrortylor/nvim-comment'] = {
-    opt = false,
-    config = conf.comment
+plugin["simrat39/symbols-outline.nvim"] = {
+	opt = true,
+	cmd = { "SymbolsOutline", "SymbolsOulineOpen" },
+	config = conf.symbols_outline,
 }
 
-plugin['simrat39/symbols-outline.nvim'] = {
-    opt = true,
-    cmd = {'SymbolsOutline', 'SymbolsOulineOpen'},
-    config = conf.symbols_outline
+plugin["folke/trouble.nvim"] = {
+	opt = false,
+	config = conf.trouble,
 }
 
-plugin['folke/trouble.nvim'] = {
-    opt = false,
-    config = conf.trouble
+plugin["wakatime/vim-wakatime"] = {
+	opt = false,
 }
 
-plugin['wakatime/vim-wakatime'] = {
-    opt = false
-}
-
-plugin['SmiteshP/nvim-gps'] = {
-    opt = false,
-    config = conf.nvim_gps
+plugin["SmiteshP/nvim-gps"] = {
+	opt = false,
+	config = conf.nvim_gps,
 }
 return plugin

@@ -61,3 +61,7 @@ nnoremap <leader><up> :res +3<CR>
 nnoremap <leader><down> :res -3<CR>
 nnoremap <leader><left> :vertical res -3<CR>
 nnoremap <leader><right> :vertical res +3<CR>
+
+inoremap <C-l> <C-o>$
+inoremap <C-h> <C-j>
+inoremap <C-j> <C-o>0

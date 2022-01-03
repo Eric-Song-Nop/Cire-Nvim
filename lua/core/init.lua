@@ -84,6 +84,7 @@ end
 local function core_settings()
     dashboard_config()
     require('core.pack')
+    require('core.keymaps')
     vim.cmd [[set background=dark]]
     vim.cmd [[colorscheme edge]]
 end
